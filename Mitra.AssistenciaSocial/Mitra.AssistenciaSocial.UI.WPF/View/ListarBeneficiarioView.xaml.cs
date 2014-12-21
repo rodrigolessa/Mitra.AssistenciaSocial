@@ -10,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Mitra.AssistenciaSocial.UI.WPF.ViewModel;
 
 namespace Mitra.AssistenciaSocial.UI.WPF.View
 {
     /// <summary>
-    /// Interaction logic for ManterEntidadeSocialView.xaml
+    /// Interaction logic for ListarBeneficiarioView.xaml
     /// </summary>
-    public partial class ManterEntidadeSocialView : Window
+    public partial class ListarBeneficiarioView : Window
     {
-        public ManterEntidadeSocialView()
+        public ListarBeneficiarioView()
         {
             InitializeComponent();
-            this.DataContext = new ManterEntidadeSocialViewModel();
         }
     }
 }

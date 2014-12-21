@@ -1,0 +1,8 @@
+﻿<Window x:Class="Mitra.AssistenciaSocial.UI.WPF.View.ListarEntidadeSocialView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ListarEntidadeSocialView" Height="300" Width="300">
+    <Grid>
+        
+    </Grid>
+</Window>

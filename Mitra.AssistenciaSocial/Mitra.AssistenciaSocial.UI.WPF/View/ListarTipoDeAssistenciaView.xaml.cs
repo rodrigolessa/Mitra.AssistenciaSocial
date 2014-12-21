@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Mitra.AssistenciaSocial.UI.WPF
+namespace Mitra.AssistenciaSocial.UI.WPF.View
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for ListarTipoDeAssistenciaView.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class ListarTipoDeAssistenciaView : Window
     {
-        public Window1()
+        public ListarTipoDeAssistenciaView()
         {
             InitializeComponent();
         }

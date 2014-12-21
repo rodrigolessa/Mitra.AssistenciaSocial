@@ -1,0 +1,33 @@
+﻿<Window x:Class="Mitra.AssistenciaSocial.UI.WPF.View.ManterBeneficiarioView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cadastro de Beneficiário" Height="600" Width="720" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,-1" ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="178*"/>
+            <ColumnDefinition Width="179*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="FICHA CADASTRAL DE ASSISTÊNCIA SOCIAL" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="438" Height="54" FontSize="20" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="176,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontSize="14" Grid.Column="1"/>
+        <Label Content="Número" HorizontalAlignment="Left" Margin="176,10,0,0" VerticalAlignment="Top" FontSize="14" Grid.Column="1"/>
+        <Label Content="Entidade Social" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="692" FontSize="14" Grid.ColumnSpan="2"/>
+        <Label Content="Data de Nascimento" HorizontalAlignment="Left" Margin="10,292,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Sexo" HorizontalAlignment="Left" Margin="226,292,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <ComboBox HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="583" FontSize="14" Grid.ColumnSpan="2"/>
+        <Label Content="Projeto / Tipo de Assistência" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <ComboBox HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="583" FontSize="14" Grid.ColumnSpan="2"/>
+        <Label Content="IDENTFICAÇÃO DO BENEFICIÁRIO" HorizontalAlignment="Left" Margin="10,202,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Nome" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button Content="Cadastrar" HorizontalAlignment="Left" Margin="256,100,0,0" VerticalAlignment="Top" Width="90" Height="25" FontSize="14" Grid.Column="1" Click="CadastrarEntidadeSocialOnClick"/>
+        <Button Content="Cadastrar" HorizontalAlignment="Left" Margin="256,158,0,0" VerticalAlignment="Top" Width="90" Height="25" FontSize="14" Grid.Column="1" Click="CadastrarTipoDeAssistenciaOnClick"/>
+        <DatePicker HorizontalAlignment="Left" Margin="10,321,0,0" VerticalAlignment="Top" FontSize="14" Width="175"/>
+        <Label Content="Estado Civil" Grid.Column="1" HorizontalAlignment="Left" Margin="10,292,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <ComboBox HorizontalAlignment="Left" Margin="226,321,0,0" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="10,321,0,0" VerticalAlignment="Top" Width="165" FontSize="14"/>
+
+    </Grid>
+</Window>
