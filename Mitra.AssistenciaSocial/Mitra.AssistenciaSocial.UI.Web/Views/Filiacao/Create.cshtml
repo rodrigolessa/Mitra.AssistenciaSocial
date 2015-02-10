@@ -1,0 +1,125 @@
+﻿@model Mitra.AssistenciaSocial.UI.Web.Models.Filiacao
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Filiacao</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Parentesco)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Parentesco)
+            @Html.ValidationMessageFor(model => model.Parentesco)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.id_beneficiario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.id_beneficiario)
+            @Html.ValidationMessageFor(model => model.id_beneficiario)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EstadoCivil)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EstadoCivil)
+            @Html.ValidationMessageFor(model => model.EstadoCivil)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataDeNascimento)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataDeNascimento)
+            @Html.ValidationMessageFor(model => model.DataDeNascimento)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GrauDeInstrucao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GrauDeInstrucao)
+            @Html.ValidationMessageFor(model => model.GrauDeInstrucao)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LocalDeTrabalho)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LocalDeTrabalho)
+            @Html.ValidationMessageFor(model => model.LocalDeTrabalho)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EnderecoDeTrabalho)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EnderecoDeTrabalho)
+            @Html.ValidationMessageFor(model => model.EnderecoDeTrabalho)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Telefone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Telefone)
+            @Html.ValidationMessageFor(model => model.Telefone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Profissao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Profissao)
+            @Html.ValidationMessageFor(model => model.Profissao)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FaixaSalarial)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FaixaSalarial)
+            @Html.ValidationMessageFor(model => model.FaixaSalarial)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HorarioDeTrabalho)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HorarioDeTrabalho)
+            @Html.ValidationMessageFor(model => model.HorarioDeTrabalho)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

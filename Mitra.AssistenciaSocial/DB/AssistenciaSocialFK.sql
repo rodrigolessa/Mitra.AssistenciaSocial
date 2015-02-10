@@ -11,5 +11,5 @@ ALTER TABLE AssistenciaSocial.Dependente ADD CONSTRAINT [FK_id_beneficiario]
 FOREIGN KEY([id_beneficiario]) REFERENCES [AssistenciaSocial].[Beneficiario] ([Id])
 
 
-ALTER TABLE AssistenciaSocial.Filiacao ADD CONSTRAINT [FK_id_beneficiario] 
+ALTER TABLE AssistenciaSocial.Filiacao ADD CONSTRAINT [FK_id_beneficiario_Filiacao] 
 FOREIGN KEY([id_beneficiario]) REFERENCES [AssistenciaSocial].[Beneficiario] ([Id])
