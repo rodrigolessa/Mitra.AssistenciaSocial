@@ -1,0 +1,328 @@
+﻿@model IEnumerable<Mitra.AssistenciaSocial.UI.Web.MVC3.Models.Beneficiario>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            TipoDeAssistencia
+        </th>
+        <th>
+            EntidadeSocial
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            CPF
+        </th>
+        <th>
+            RG
+        </th>
+        <th>
+            DataDeNascimento
+        </th>
+        <th>
+            Sexo
+        </th>
+        <th>
+            EstadoCivil
+        </th>
+        <th>
+            Naturalidade
+        </th>
+        <th>
+            Cor
+        </th>
+        <th>
+            GrauDeInstrucao
+        </th>
+        <th>
+            Endereco
+        </th>
+        <th>
+            Bairro
+        </th>
+        <th>
+            Cidade
+        </th>
+        <th>
+            Estado
+        </th>
+        <th>
+            Telefone
+        </th>
+        <th>
+            PontoDeFerencia
+        </th>
+        <th>
+            NomeDoResponsavel
+        </th>
+        <th>
+            TelefoneDoResponsavel
+        </th>
+        <th>
+            RendaFamiliar
+        </th>
+        <th>
+            BeneficioDeEntidade
+        </th>
+        <th>
+            TipoDeBeneficioDaEntidade
+        </th>
+        <th>
+            NomeDaEntidade
+        </th>
+        <th>
+            TipoDeResidencia
+        </th>
+        <th>
+            EspecificarTipoDeResidencia
+        </th>
+        <th>
+            TipoDeConstrucao
+        </th>
+        <th>
+            PisoDaConstrucao
+        </th>
+        <th>
+            CoberturaDaConstrucao
+        </th>
+        <th>
+            NumeroDeComodosDaConstrucao
+        </th>
+        <th>
+            ComodosDaConstrucao
+        </th>
+        <th>
+            EsgotoDaConstrucao
+        </th>
+        <th>
+            AguaDaConstrucao
+        </th>
+        <th>
+            BanheiroDaConstrucao
+        </th>
+        <th>
+            EnergiaEletricaDaConstrucao
+        </th>
+        <th>
+            LixoDaConstrucao
+        </th>
+        <th>
+            PossuiOutrosImoveis
+        </th>
+        <th>
+            TipoDeConstrucaoOutrosImoveis
+        </th>
+        <th>
+            PossuiVeiculo
+        </th>
+        <th>
+            UtilizacaoDoVeiculo
+        </th>
+        <th>
+            AnoDoVeiculo
+        </th>
+        <th>
+            ModeloDoVeiculo
+        </th>
+        <th>
+            PossuiConvenioMedico
+        </th>
+        <th>
+            NomeDoConvenioMedico
+        </th>
+        <th>
+            TratamentoMedico
+        </th>
+        <th>
+            QualTipoDeDoenca
+        </th>
+        <th>
+            MedicamentoDeUsoContinuo
+        </th>
+        <th>
+            ComoAdquireMedicamentos
+        </th>
+        <th>
+            EspecificarComoAdquireMedicamentos
+        </th>
+        <th>
+            InformacoesAdicionais
+        </th>
+        <th>
+            DataDeCadastro
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDeAssistencia.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntidadeSocial.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataDeNascimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sexo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoCivil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Naturalidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GrauDeInstrucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Endereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bairro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PontoDeFerencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeDoResponsavel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelefoneDoResponsavel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RendaFamiliar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BeneficioDeEntidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDeBeneficioDaEntidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeDaEntidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDeResidencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EspecificarTipoDeResidencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDeConstrucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PisoDaConstrucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CoberturaDaConstrucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroDeComodosDaConstrucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComodosDaConstrucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EsgotoDaConstrucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AguaDaConstrucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BanheiroDaConstrucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnergiaEletricaDaConstrucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LixoDaConstrucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PossuiOutrosImoveis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDeConstrucaoOutrosImoveis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PossuiVeiculo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UtilizacaoDoVeiculo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnoDoVeiculo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModeloDoVeiculo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PossuiConvenioMedico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeDoConvenioMedico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TratamentoMedico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QualTipoDeDoenca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicamentoDeUsoContinuo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComoAdquireMedicamentos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EspecificarComoAdquireMedicamentos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InformacoesAdicionais)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataDeCadastro)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

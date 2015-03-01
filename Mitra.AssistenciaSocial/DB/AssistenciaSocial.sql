@@ -3,7 +3,6 @@
 --   Created On : Saturday, 06 December, 2014 
 --   DBMS       : SQL Server 2008 
 --   -------------------------------------------------- 
-
 USE Mitra
 ;
 
