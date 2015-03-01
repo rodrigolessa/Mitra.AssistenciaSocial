@@ -1,0 +1,69 @@
+﻿@model Mitra.AssistenciaSocial.UI.Web.Models.Dependente
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Dependente</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Beneficiario.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Beneficiario.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataDeNascimento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataDeNascimento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Parentesco)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Parentesco)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EstadoCivil)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EstadoCivil)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GrauDeInstrucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GrauDeInstrucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Profissao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Profissao)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Ir para listagem", "Index")
+    </p>
+}

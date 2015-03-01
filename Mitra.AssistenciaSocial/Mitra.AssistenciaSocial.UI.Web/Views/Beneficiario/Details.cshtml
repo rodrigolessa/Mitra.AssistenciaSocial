@@ -1,0 +1,366 @@
+﻿@model Mitra.AssistenciaSocial.UI.Web.Models.Beneficiario
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Beneficiario</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoDeAssistencia.Descricao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoDeAssistencia.Descricao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EntidadeSocial.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EntidadeSocial.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CPF)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CPF)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RG)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RG)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataDeNascimento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataDeNascimento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Sexo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Sexo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EstadoCivil)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EstadoCivil)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Naturalidade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Naturalidade)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cor)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GrauDeInstrucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GrauDeInstrucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Endereco)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Endereco)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Bairro)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Bairro)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cidade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cidade)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Estado)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Estado)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Telefone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Telefone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PontoDeFerencia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PontoDeFerencia)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NomeDoResponsavel)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NomeDoResponsavel)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TelefoneDoResponsavel)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TelefoneDoResponsavel)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RendaFamiliar)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RendaFamiliar)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BeneficioDeEntidade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BeneficioDeEntidade)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoDeBeneficioDaEntidade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoDeBeneficioDaEntidade)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NomeDaEntidade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NomeDaEntidade)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoDeResidencia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoDeResidencia)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EspecificarTipoDeResidencia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EspecificarTipoDeResidencia)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoDeConstrucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoDeConstrucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PisoDaConstrucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PisoDaConstrucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CoberturaDaConstrucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CoberturaDaConstrucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NumeroDeComodosDaConstrucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumeroDeComodosDaConstrucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ComodosDaConstrucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ComodosDaConstrucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EsgotoDaConstrucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EsgotoDaConstrucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AguaDaConstrucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AguaDaConstrucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BanheiroDaConstrucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BanheiroDaConstrucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EnergiaEletricaDaConstrucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EnergiaEletricaDaConstrucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LixoDaConstrucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LixoDaConstrucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PossuiOutrosImoveis)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PossuiOutrosImoveis)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoDeConstrucaoOutrosImoveis)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoDeConstrucaoOutrosImoveis)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PossuiVeiculo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PossuiVeiculo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UtilizacaoDoVeiculo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UtilizacaoDoVeiculo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AnoDoVeiculo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AnoDoVeiculo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ModeloDoVeiculo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModeloDoVeiculo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PossuiConvenioMedico)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PossuiConvenioMedico)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NomeDoConvenioMedico)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NomeDoConvenioMedico)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TratamentoMedico)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TratamentoMedico)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.QualTipoDeDoenca)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.QualTipoDeDoenca)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MedicamentoDeUsoContinuo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MedicamentoDeUsoContinuo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ComoAdquireMedicamentos)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ComoAdquireMedicamentos)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EspecificarComoAdquireMedicamentos)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EspecificarComoAdquireMedicamentos)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InformacoesAdicionais)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InformacoesAdicionais)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataDeCadastro)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataDeCadastro)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Ir para listagem", "Index")
+</p>

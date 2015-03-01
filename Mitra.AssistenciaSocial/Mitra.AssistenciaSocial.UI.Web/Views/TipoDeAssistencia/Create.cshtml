@@ -1,0 +1,36 @@
+﻿@model Mitra.AssistenciaSocial.UI.Web.Models.TipoDeAssistencia
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<ol class="breadcrumb">
+  <li><a href="#">Mitra</a></li>
+  <li><a href="@Url.Action("Index")">Tipo de Assistência</a></li>
+  <li class="active">Novo</li>
+</ol>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Descricao)
+            @Html.EditorFor(model => model.Descricao)
+            @Html.ValidationMessageFor(model => model.Descricao)
+        </div>
+
+        <input type="submit" value="Salvar" class="btn btn-primary" />
+    </fieldset>
+}
+
+<div class="float-right">
+    @Html.ActionLink("Ir para listagem", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

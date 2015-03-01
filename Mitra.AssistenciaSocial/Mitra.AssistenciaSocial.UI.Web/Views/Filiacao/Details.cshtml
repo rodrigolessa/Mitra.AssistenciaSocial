@@ -1,0 +1,100 @@
+﻿@model Mitra.AssistenciaSocial.UI.Web.Models.Filiacao
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Filiacao</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Parentesco)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Parentesco)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Beneficiario.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Beneficiario.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EstadoCivil)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EstadoCivil)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataDeNascimento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataDeNascimento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GrauDeInstrucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GrauDeInstrucao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LocalDeTrabalho)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LocalDeTrabalho)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EnderecoDeTrabalho)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EnderecoDeTrabalho)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Telefone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Telefone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Profissao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Profissao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FaixaSalarial)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FaixaSalarial)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HorarioDeTrabalho)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HorarioDeTrabalho)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Ir para listagem", "Index")
+</p>

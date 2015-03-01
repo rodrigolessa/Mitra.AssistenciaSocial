@@ -1,0 +1,72 @@
+﻿@model Mitra.AssistenciaSocial.UI.Web.Models.EntidadeSocial
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<ol class="breadcrumb">
+  <li><a href="#">Mitra</a></li>
+  <li><a href="@Url.Action("Index")">Entidade Social</a></li>
+  <li class="active">Novo</li>
+</ol>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nome)
+                    @Html.TextBoxFor(model => model.Nome, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Nome)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CNPJ)
+                    @Html.TextBoxFor(model => model.CNPJ, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.CNPJ)
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Endereco)
+                    @Html.TextBoxFor(model => model.Endereco, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Endereco)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Telefone)
+                    @Html.TextBoxFor(model => model.Telefone, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Telefone)
+                </div>
+            </div>
+
+        </div>
+
+        <input type="submit" value="Salvar" class="btn btn-primary" />
+
+    </fieldset>
+}
+
+<div class="float-right">
+    @Html.ActionLink("Ir para listagem", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

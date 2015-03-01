@@ -1,0 +1,86 @@
+﻿@model Mitra.AssistenciaSocial.UI.Web.Models.Dependente
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<ol class="breadcrumb">
+  <li><a href="#">Mitra</a></li>
+  <li><a href="@Url.Action("Index")">Dependente</a></li>
+  <li class="active">Novo</li>
+</ol>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.id_beneficiario, "Beneficiario")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("id_beneficiario", String.Empty)
+            @Html.ValidationMessageFor(model => model.id_beneficiario)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DataDeNascimento)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataDeNascimento)
+            @Html.ValidationMessageFor(model => model.DataDeNascimento)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Parentesco)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Parentesco)
+            @Html.ValidationMessageFor(model => model.Parentesco)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EstadoCivil)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EstadoCivil)
+            @Html.ValidationMessageFor(model => model.EstadoCivil)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.GrauDeInstrucao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GrauDeInstrucao)
+            @Html.ValidationMessageFor(model => model.GrauDeInstrucao)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Profissao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Profissao)
+            @Html.ValidationMessageFor(model => model.Profissao)
+        </div>
+
+        <input type="submit" value="Salvar" class="btn btn-primary" />
+    </fieldset>
+}
+
+<div class="float-right">
+    @Html.ActionLink("Ir para listagem", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
