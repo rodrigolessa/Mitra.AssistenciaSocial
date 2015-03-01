@@ -61,13 +61,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mitra.Dominio\Mitra.Dominio.csproj">
-      <Project>{bcf01073-e520-453a-ba35-f5ef8aa31a46}</Project>
-      <Name>Mitra.Dominio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Mitra.Infraestrutura.Persistencia\Mitra.Infraestrutura.Persistencia.csproj">
-      <Project>{d4fff6db-56b8-4c10-ae50-add2164899d5}</Project>
-      <Name>Mitra.Infraestrutura.Persistencia</Name>
+    <ProjectReference Include="..\Mitra.AssistenciaSocial.UI.Web\Mitra.AssistenciaSocial.UI.Web.csproj">
+      <Project>{9f3c6592-cb3f-4931-b7f6-8b19d3ba1d05}</Project>
+      <Name>Mitra.AssistenciaSocial.UI.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

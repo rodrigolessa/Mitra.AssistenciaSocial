@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using System.Data.Entity;
 using NUnit.Framework;
-using Mitra.Dominio.Entities;
-using Mitra.Infraestrutura.Persistencia.UnitOfWork;
+using Mitra.AssistenciaSocial.UI.Web.Models;
 
 namespace Mitra.Infraestrutura.Persistencia.Teste.Repositories
 {
@@ -32,8 +32,7 @@ namespace Mitra.Infraestrutura.Persistencia.Teste.Repositories
         [Test]
         public void CriarEntidadeSocial()
         {
-            var _QUERY_DELETE_ENTIDADE = "DELETE FROM Mitra.AssistenciaSocial.EntidadeSocial WHERE Nome LIKE 'CPA COMUNIDADE PORTO ALEGRE';";
-            unit.Database.ExecuteSqlCommand(_QUERY_DELETE_ENTIDADE);
+            unit.Database.ExecuteSqlCommand("DELETE FROM Mitra.AssistenciaSocial.EntidadeSocial WHERE Nome LIKE 'CPA COMUNIDADE PORTO ALEGRE';");
 
             var entidade = new EntidadeSocial()
             {
