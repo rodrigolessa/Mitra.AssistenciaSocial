@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Mitra.AssistenciaSocial.UI.Web.Models;
+using Mitra.AssistenciaSocial.UI.Web.Models.ListItem;
 
 namespace Mitra.AssistenciaSocial.UI.Web.Controllers
 {
@@ -42,7 +43,11 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         {
             ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome");
             ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao");
-            return View();
+            ViewBag.Sexo = GeneroListItem.Obter();
+
+            var beneficiario = new Beneficiario();
+
+            return View(beneficiario);
         }
 
         //
@@ -61,6 +66,8 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
 
             ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", beneficiario.id_entidade_social);
             ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao", beneficiario.id_tipo_assistencia);
+            ViewBag.Sexo = GeneroListItem.Obter();
+
             return View(beneficiario);
         }
 

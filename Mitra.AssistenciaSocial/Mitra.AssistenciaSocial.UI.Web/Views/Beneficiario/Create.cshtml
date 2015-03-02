@@ -6,134 +6,319 @@
 }
 
 <ol class="breadcrumb">
-  <li><a href="#">Mitra</a></li>
-  <li><a href="@Url.Action("Index")">Beneficiário</a></li>
-  <li class="active">Novo</li>
+    <li><a href="#">Mitra</a></li>
+    <li><a href="@Url.Action("Index")">Beneficiário</a></li>
+    <li class="active">Novo</li>
 </ol>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.id_tipo_assistencia, "TipoDeAssistencia")
-            @Html.DropDownList("id_tipo_assistencia", String.Empty)
-            @Html.ValidationMessageFor(model => model.id_tipo_assistencia)
+        <h2>Ficha Cadastral de Assistência Social</h2>
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.id_entidade_social, "EntidadeSocial")
+                    @Html.DropDownList("id_entidade_social", null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.id_entidade_social)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.id_tipo_assistencia, "TipoDeAssistencia")
+                    @Html.DropDownList("id_tipo_assistencia", null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.id_tipo_assistencia)
+                </div>
+            </div>
+
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.id_entidade_social, "EntidadeSocial")
-            @Html.DropDownList("id_entidade_social", String.Empty)
-            @Html.ValidationMessageFor(model => model.id_entidade_social)
+        <h2>1. Identificação do Beneficiário</h2>
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nome)
+                    @Html.TextBoxFor(model => model.Nome, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Nome)
+                </div>
+            </div>
+
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Nome)
-            @Html.EditorFor(model => model.Nome)
-            @Html.ValidationMessageFor(model => model.Nome)
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DataDeNascimento)
+                    @Html.TextBoxFor(model => model.DataDeNascimento, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.DataDeNascimento)
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EstadoCivil)
+                    @Html.EditorFor(model => model.EstadoCivil)
+                    @Html.ValidationMessageFor(model => model.EstadoCivil)
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.GrauDeInstrucao)
+                    @Html.EditorFor(model => model.GrauDeInstrucao)
+                    @Html.ValidationMessageFor(model => model.GrauDeInstrucao)
+                </div>
+            </div>
+
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CPF)
-            @Html.EditorFor(model => model.CPF)
-            @Html.ValidationMessageFor(model => model.CPF)
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Naturalidade)
+                    @Html.TextBoxFor(model => model.Naturalidade, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Naturalidade)
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Cor)
+                    @Html.EditorFor(model => model.Cor)
+                    @Html.ValidationMessageFor(model => model.Cor)
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Sexo)
+                    @Html.DropDownList("Sexo", null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Sexo)
+                </div>
+            </div>
+
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.RG)
-            @Html.EditorFor(model => model.RG)
-            @Html.ValidationMessageFor(model => model.RG)
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CPF)
+                    @Html.TextBoxFor(model => model.CPF, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.CPF)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RG)
+                    @Html.TextBoxFor(model => model.RG, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.RG)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Telefone)
+                    @Html.TextBoxFor(model => model.Telefone, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Telefone)
+                </div>
+            </div>
+
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.DataDeNascimento)
-            @Html.EditorFor(model => model.DataDeNascimento)
-            @Html.ValidationMessageFor(model => model.DataDeNascimento)
+        <hr />
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Endereco)
+                    @Html.TextBoxFor(model => model.Endereco, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Endereco)
+                </div>
+            </div>
+
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Sexo)
-            @Html.EditorFor(model => model.Sexo)
-            @Html.ValidationMessageFor(model => model.Sexo)
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Bairro)
+                    @Html.TextBoxFor(model => model.Bairro, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Bairro)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Cidade)
+                    @Html.TextBoxFor(model => model.Cidade, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Cidade)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Estado)
+                    @Html.EditorFor(model => model.Estado)
+                    @Html.ValidationMessageFor(model => model.Estado)
+                </div>
+            </div>
+
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.EstadoCivil)
-            @Html.EditorFor(model => model.EstadoCivil)
-            @Html.ValidationMessageFor(model => model.EstadoCivil)
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PontoDeFerencia)
+                    @Html.TextBoxFor(model => model.PontoDeFerencia, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PontoDeFerencia)
+                </div>
+            </div>
+
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Naturalidade)
-            @Html.EditorFor(model => model.Naturalidade)
-            @Html.ValidationMessageFor(model => model.Naturalidade)
+        <hr />
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NomeDoResponsavel)
+                    @Html.TextBoxFor(model => model.NomeDoResponsavel, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.NomeDoResponsavel)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TelefoneDoResponsavel)
+                    @Html.TextBoxFor(model => model.TelefoneDoResponsavel, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.TelefoneDoResponsavel)
+                </div>
+            </div>
+
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Cor)
-            @Html.EditorFor(model => model.Cor)
-            @Html.ValidationMessageFor(model => model.Cor)
-        </div>
+        <h3>1.1. Filiação</h3>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.GrauDeInstrucao)
-            @Html.EditorFor(model => model.GrauDeInstrucao)
-            @Html.ValidationMessageFor(model => model.GrauDeInstrucao)
-        </div>
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Filiacaos.FirstOrDefault().Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Filiacaos.FirstOrDefault().DataDeNascimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Filiacaos.FirstOrDefault().Parentesco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Filiacaos.FirstOrDefault().EstadoCivil)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Filiacaos.FirstOrDefault().GrauDeInstrucao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Filiacaos.FirstOrDefault().Profissao)
+                </th>
+            </tr>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Endereco)
-            @Html.EditorFor(model => model.Endereco)
-            @Html.ValidationMessageFor(model => model.Endereco)
-        </div>
+            @foreach (var item in Model.Filiacaos)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataDeNascimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Parentesco)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EstadoCivil)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GrauDeInstrucao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Profissao)
+                    </td>
+                </tr>
+            }
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Bairro)
-            @Html.EditorFor(model => model.Bairro)
-            @Html.ValidationMessageFor(model => model.Bairro)
-        </div>
+        </table>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Cidade)
-            @Html.EditorFor(model => model.Cidade)
-            @Html.ValidationMessageFor(model => model.Cidade)
-        </div>
+        <h2>2. Informações Sobre a Família (pessoas que vivem na mesma casa (dependentes))</h2>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Estado)
-            @Html.EditorFor(model => model.Estado)
-            @Html.ValidationMessageFor(model => model.Estado)
-        </div>
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dependentes.FirstOrDefault().Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dependentes.FirstOrDefault().DataDeNascimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dependentes.FirstOrDefault().Parentesco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dependentes.FirstOrDefault().EstadoCivil)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dependentes.FirstOrDefault().GrauDeInstrucao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dependentes.FirstOrDefault().Profissao)
+                </th>
+            </tr>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Telefone)
-            @Html.EditorFor(model => model.Telefone)
-            @Html.ValidationMessageFor(model => model.Telefone)
-        </div>
+            @foreach (var item in Model.Dependentes)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataDeNascimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Parentesco)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EstadoCivil)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GrauDeInstrucao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Profissao)
+                    </td>
+                </tr>
+            }
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.PontoDeFerencia)
-            @Html.EditorFor(model => model.PontoDeFerencia)
-            @Html.ValidationMessageFor(model => model.PontoDeFerencia)
-        </div>
+        </table>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.NomeDoResponsavel)
-            @Html.EditorFor(model => model.NomeDoResponsavel)
-            @Html.ValidationMessageFor(model => model.NomeDoResponsavel)
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.TelefoneDoResponsavel)
-            @Html.EditorFor(model => model.TelefoneDoResponsavel)
-            @Html.ValidationMessageFor(model => model.TelefoneDoResponsavel)
-        </div>
+        <h2>3. Renda Familiar (faixa salarial mensal bruta)</h2>
 
         <div class="form-group">
             @Html.LabelFor(model => model.RendaFamiliar)
-            @Html.EditorFor(model => model.RendaFamiliar)
+            @Html.TextBoxFor(model => model.RendaFamiliar, new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.RendaFamiliar)
         </div>
 
@@ -151,9 +336,11 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.NomeDaEntidade)
-            @Html.EditorFor(model => model.NomeDaEntidade)
+            @Html.TextBoxFor(model => model.NomeDaEntidade, new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.NomeDaEntidade)
         </div>
+
+        <h2>4. Situação Habitacional</h2>
 
         <div class="form-group">
             @Html.LabelFor(model => model.TipoDeResidencia)
@@ -227,6 +414,8 @@
             @Html.ValidationMessageFor(model => model.LixoDaConstrucao)
         </div>
 
+        <h2>5. Bens da Família</h2>
+
         <div class="form-group">
             @Html.LabelFor(model => model.PossuiOutrosImoveis)
             @Html.EditorFor(model => model.PossuiOutrosImoveis)
@@ -262,6 +451,8 @@
             @Html.EditorFor(model => model.ModeloDoVeiculo)
             @Html.ValidationMessageFor(model => model.ModeloDoVeiculo)
         </div>
+
+        <h2>6. Saúde da Família</h2>
 
         <div class="form-group">
             @Html.LabelFor(model => model.PossuiConvenioMedico)

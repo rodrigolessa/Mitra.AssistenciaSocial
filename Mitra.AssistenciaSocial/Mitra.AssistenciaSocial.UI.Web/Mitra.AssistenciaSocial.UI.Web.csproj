@@ -197,6 +197,7 @@
     <Compile Include="Models\Dependente.cs" />
     <Compile Include="Models\EntidadeSocial.cs" />
     <Compile Include="Models\Filiacao.cs" />
+    <Compile Include="Models\ListItem\GeneroListItem.cs" />
     <Compile Include="Models\Mapping\BeneficiarioMap.cs" />
     <Compile Include="Models\Mapping\DependenteMap.cs" />
     <Compile Include="Models\Mapping\EntidadeSocialMap.cs" />
