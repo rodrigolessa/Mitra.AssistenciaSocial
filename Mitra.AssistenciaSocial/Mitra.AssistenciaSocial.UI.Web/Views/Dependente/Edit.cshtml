@@ -1,84 +1,100 @@
 ﻿@model Mitra.AssistenciaSocial.UI.Web.Models.Dependente
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<ol class="breadcrumb">
+    <li><a href="#">Mitra</a></li>
+    <li><a href="@Url.Action("Index")">Dependente</a></li>
+    <li class="active">Editar</li>
+</ol>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Dependente</legend>
 
         @Html.HiddenFor(model => model.Id)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.id_beneficiario, "Beneficiario")
-        </div>
-        <div class="editor-field">
-            @Html.DropDownList("id_beneficiario", String.Empty)
-            @Html.ValidationMessageFor(model => model.id_beneficiario)
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.id_beneficiario, "Beneficiario")
+                    @Html.DropDownList("id_beneficiario", null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.id_beneficiario)
+                </div>
+            </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Nome)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Nome)
-            @Html.ValidationMessageFor(model => model.Nome)
+        <div class="row">
+
+            <div class="col-md-8">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nome)
+                    @Html.TextBoxFor(model => model.Nome, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Nome)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DataDeNascimento)
+                    @Html.TextBoxFor(model => model.DataDeNascimento, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.DataDeNascimento)
+                </div>
+            </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.DataDeNascimento)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.DataDeNascimento)
-            @Html.ValidationMessageFor(model => model.DataDeNascimento)
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Parentesco)
+                    @Html.DropDownList("Parentesco", null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Parentesco)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EstadoCivil)
+                    @Html.DropDownList("EstadoCivil", null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.EstadoCivil)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.GrauDeInstrucao)
+                    @Html.DropDownList("GrauDeInstrucao", null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.GrauDeInstrucao)
+                </div>
+            </div>
+
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Parentesco)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Parentesco)
-            @Html.ValidationMessageFor(model => model.Parentesco)
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Profissao)
+                    @Html.TextBoxFor(model => model.Profissao, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Profissao)
+                </div>
+            </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.EstadoCivil)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.EstadoCivil)
-            @Html.ValidationMessageFor(model => model.EstadoCivil)
-        </div>
+        <input type="submit" value="Salvar" class="btn btn-primary" />
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.GrauDeInstrucao)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.GrauDeInstrucao)
-            @Html.ValidationMessageFor(model => model.GrauDeInstrucao)
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Profissao)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Profissao)
-            @Html.ValidationMessageFor(model => model.Profissao)
-        </div>
-
-        <p>
-            <input type="submit" value="Save" />
-        </p>
     </fieldset>
 }
 
-<div>
+<div class="float-right">
     @Html.ActionLink("Ir para listagem", "Index")
 </div>
 

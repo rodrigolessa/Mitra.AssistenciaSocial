@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Mitra.AssistenciaSocial.UI.Web.Models
 {
@@ -11,6 +12,7 @@ namespace Mitra.AssistenciaSocial.UI.Web.Models
         }
 
         public int Id { get; set; }
+        [DisplayName("Descrição")]
         public string Descricao { get; set; }
         public virtual ICollection<Beneficiario> Beneficiarios { get; set; }
     }

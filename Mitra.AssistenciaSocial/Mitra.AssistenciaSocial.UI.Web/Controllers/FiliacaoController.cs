@@ -6,9 +6,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Mitra.AssistenciaSocial.UI.Web.Models;
+using Mitra.AssistenciaSocial.UI.Web.Models.ListItem;
 
 namespace Mitra.AssistenciaSocial.UI.Web.Controllers
 {
+    [Authorize]
     public class FiliacaoController : Controller
     {
         private MitraContext db = new MitraContext();
@@ -41,6 +43,10 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         public ActionResult Create()
         {
             ViewBag.id_beneficiario = new SelectList(db.Beneficiarios, "Id", "Nome");
+            ViewBag.HorarioDeTrabalho = HorarioDeTrabalhoListItem.Obter();
+            ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
+            ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
+            ViewBag.Parentesco = ParentescoListItem.Obter();
             return View();
         }
 
@@ -59,6 +65,10 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
             }
 
             ViewBag.id_beneficiario = new SelectList(db.Beneficiarios, "Id", "Nome", filiacao.id_beneficiario);
+            ViewBag.HorarioDeTrabalho = HorarioDeTrabalhoListItem.Obter();
+            ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
+            ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
+            ViewBag.Parentesco = ParentescoListItem.Obter();
             return View(filiacao);
         }
 
@@ -73,6 +83,10 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
                 return HttpNotFound();
             }
             ViewBag.id_beneficiario = new SelectList(db.Beneficiarios, "Id", "Nome", filiacao.id_beneficiario);
+            ViewBag.HorarioDeTrabalho = HorarioDeTrabalhoListItem.Obter();
+            ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
+            ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
+            ViewBag.Parentesco = ParentescoListItem.Obter();
             return View(filiacao);
         }
 
@@ -90,6 +104,10 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.id_beneficiario = new SelectList(db.Beneficiarios, "Id", "Nome", filiacao.id_beneficiario);
+            ViewBag.HorarioDeTrabalho = HorarioDeTrabalhoListItem.Obter();
+            ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
+            ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
+            ViewBag.Parentesco = ParentescoListItem.Obter();
             return View(filiacao);
         }
 

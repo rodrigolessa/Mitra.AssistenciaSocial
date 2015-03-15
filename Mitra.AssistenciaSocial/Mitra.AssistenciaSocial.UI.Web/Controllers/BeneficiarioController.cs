@@ -10,6 +10,7 @@ using Mitra.AssistenciaSocial.UI.Web.Models.ListItem;
 
 namespace Mitra.AssistenciaSocial.UI.Web.Controllers
 {
+    [Authorize]
     public class BeneficiarioController : Controller
     {
         private MitraContext db = new MitraContext();
@@ -43,7 +44,24 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         {
             ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome");
             ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao");
+
+            ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
+            ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
+            ViewBag.Cor = new List<SelectListItem>();
             ViewBag.Sexo = GeneroListItem.Obter();
+            ViewBag.Estado = new List<SelectListItem>();
+            ViewBag.TipoDeResidencia = new List<SelectListItem>();
+            ViewBag.TipoDeConstrucao = new List<SelectListItem>();
+            ViewBag.PisoDaConstrucao = new List<SelectListItem>();
+            ViewBag.CoberturaDaConstrucao = new List<SelectListItem>();
+            ViewBag.EsgotoDaConstrucao = new List<SelectListItem>();
+            ViewBag.AguaDaConstrucao = new List<SelectListItem>();
+            ViewBag.BanheiroDaConstrucao = new List<SelectListItem>();
+            ViewBag.EnergiaEletricaDaConstrucao = new List<SelectListItem>();
+            ViewBag.LixoDaConstrucao = new List<SelectListItem>();
+            ViewBag.TipoDeConstrucaoOutrosImoveis = new List<SelectListItem>();
+            ViewBag.UtilizacaoDoVeiculo = new List<SelectListItem>();
+            ViewBag.ComoAdquireMedicamentos = new List<SelectListItem>();
 
             var beneficiario = new Beneficiario();
 
@@ -66,7 +84,24 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
 
             ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", beneficiario.id_entidade_social);
             ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao", beneficiario.id_tipo_assistencia);
+
+            ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
+            ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
+            ViewBag.Cor = new List<SelectListItem>();
             ViewBag.Sexo = GeneroListItem.Obter();
+            ViewBag.Estado = new List<SelectListItem>();
+            ViewBag.TipoDeResidencia = new List<SelectListItem>();
+            ViewBag.TipoDeConstrucao = new List<SelectListItem>();
+            ViewBag.PisoDaConstrucao = new List<SelectListItem>();
+            ViewBag.CoberturaDaConstrucao = new List<SelectListItem>();
+            ViewBag.EsgotoDaConstrucao = new List<SelectListItem>();
+            ViewBag.AguaDaConstrucao = new List<SelectListItem>();
+            ViewBag.BanheiroDaConstrucao = new List<SelectListItem>();
+            ViewBag.EnergiaEletricaDaConstrucao = new List<SelectListItem>();
+            ViewBag.LixoDaConstrucao = new List<SelectListItem>();
+            ViewBag.TipoDeConstrucaoOutrosImoveis = new List<SelectListItem>();
+            ViewBag.UtilizacaoDoVeiculo = new List<SelectListItem>();
+            ViewBag.ComoAdquireMedicamentos = new List<SelectListItem>();
 
             return View(beneficiario);
         }
@@ -83,6 +118,25 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
             }
             ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", beneficiario.id_entidade_social);
             ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao", beneficiario.id_tipo_assistencia);
+
+            ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
+            ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
+            ViewBag.Cor = new List<SelectListItem>();
+            ViewBag.Sexo = GeneroListItem.Obter();
+            ViewBag.Estado = new List<SelectListItem>();
+            ViewBag.TipoDeResidencia = new List<SelectListItem>();
+            ViewBag.TipoDeConstrucao = new List<SelectListItem>();
+            ViewBag.PisoDaConstrucao = new List<SelectListItem>();
+            ViewBag.CoberturaDaConstrucao = new List<SelectListItem>();
+            ViewBag.EsgotoDaConstrucao = new List<SelectListItem>();
+            ViewBag.AguaDaConstrucao = new List<SelectListItem>();
+            ViewBag.BanheiroDaConstrucao = new List<SelectListItem>();
+            ViewBag.EnergiaEletricaDaConstrucao = new List<SelectListItem>();
+            ViewBag.LixoDaConstrucao = new List<SelectListItem>();
+            ViewBag.TipoDeConstrucaoOutrosImoveis = new List<SelectListItem>();
+            ViewBag.UtilizacaoDoVeiculo = new List<SelectListItem>();
+            ViewBag.ComoAdquireMedicamentos = new List<SelectListItem>();
+
             return View(beneficiario);
         }
 
@@ -101,6 +155,25 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
             }
             ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", beneficiario.id_entidade_social);
             ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao", beneficiario.id_tipo_assistencia);
+
+            ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
+            ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
+            ViewBag.Cor = new List<SelectListItem>();
+            ViewBag.Sexo = GeneroListItem.Obter();
+            ViewBag.Estado = new List<SelectListItem>();
+            ViewBag.TipoDeResidencia = new List<SelectListItem>();
+            ViewBag.TipoDeConstrucao = new List<SelectListItem>();
+            ViewBag.PisoDaConstrucao = new List<SelectListItem>();
+            ViewBag.CoberturaDaConstrucao = new List<SelectListItem>();
+            ViewBag.EsgotoDaConstrucao = new List<SelectListItem>();
+            ViewBag.AguaDaConstrucao = new List<SelectListItem>();
+            ViewBag.BanheiroDaConstrucao = new List<SelectListItem>();
+            ViewBag.EnergiaEletricaDaConstrucao = new List<SelectListItem>();
+            ViewBag.LixoDaConstrucao = new List<SelectListItem>();
+            ViewBag.TipoDeConstrucaoOutrosImoveis = new List<SelectListItem>();
+            ViewBag.UtilizacaoDoVeiculo = new List<SelectListItem>();
+            ViewBag.ComoAdquireMedicamentos = new List<SelectListItem>();
+
             return View(beneficiario);
         }
 

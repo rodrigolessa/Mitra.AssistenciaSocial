@@ -6,9 +6,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Mitra.AssistenciaSocial.UI.Web.Models;
+using Mitra.AssistenciaSocial.UI.Web.Models.ListItem;
 
 namespace Mitra.AssistenciaSocial.UI.Web.Controllers
 {
+    [Authorize]
     public class DependenteController : Controller
     {
         private MitraContext db = new MitraContext();
@@ -41,6 +43,9 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         public ActionResult Create()
         {
             ViewBag.id_beneficiario = new SelectList(db.Beneficiarios, "Id", "Nome");
+            ViewBag.Parentesco = ParentescoListItem.Obter();
+                ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
+                ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
             return View();
         }
 
@@ -59,6 +64,9 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
             }
 
             ViewBag.id_beneficiario = new SelectList(db.Beneficiarios, "Id", "Nome", dependente.id_beneficiario);
+            ViewBag.Parentesco = ParentescoListItem.Obter();
+            ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
+            ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
             return View(dependente);
         }
 
@@ -73,6 +81,9 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
                 return HttpNotFound();
             }
             ViewBag.id_beneficiario = new SelectList(db.Beneficiarios, "Id", "Nome", dependente.id_beneficiario);
+            ViewBag.Parentesco = ParentescoListItem.Obter();
+            ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
+            ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
             return View(dependente);
         }
 
@@ -90,6 +101,9 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.id_beneficiario = new SelectList(db.Beneficiarios, "Id", "Nome", dependente.id_beneficiario);
+            ViewBag.Parentesco = ParentescoListItem.Obter();
+            ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
+            ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
             return View(dependente);
         }
 

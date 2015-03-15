@@ -9,6 +9,7 @@ using Mitra.AssistenciaSocial.UI.Web.Models;
 
 namespace Mitra.AssistenciaSocial.UI.Web.Controllers
 {
+    [Authorize]
     public class TipoDeAssistenciaController : Controller
     {
         private MitraContext db = new MitraContext();

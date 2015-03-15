@@ -1,36 +1,42 @@
 ﻿@model Mitra.AssistenciaSocial.UI.Web.Models.TipoDeAssistencia
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<ol class="breadcrumb">
+    <li><a href="#">Mitra</a></li>
+    <li><a href="@Url.Action("Index")">Tipo de Assistência</a></li>
+    <li class="active">Editar</li>
+</ol>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>TipoDeAssistencia</legend>
 
         @Html.HiddenFor(model => model.Id)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Descricao)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Descricao)
-            @Html.ValidationMessageFor(model => model.Descricao)
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Descricao)
+                    @Html.TextBoxFor(model => model.Descricao, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Descricao)
+                </div>
+            </div>
+
         </div>
 
-        <p>
-            <input type="submit" value="Save" />
-        </p>
+        <input type="submit" value="Salvar" class="btn btn-primary" />
+
     </fieldset>
 }
 
-<div>
+<div class="float-right">
     @Html.ActionLink("Ir para listagem", "Index")
 </div>
 

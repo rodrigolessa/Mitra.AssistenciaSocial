@@ -1,14 +1,14 @@
 ﻿@model Mitra.AssistenciaSocial.UI.Web.Models.EntidadeSocial
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Novo";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <ol class="breadcrumb">
-  <li><a href="#">Mitra</a></li>
-  <li><a href="@Url.Action("Index")">Entidade Social</a></li>
-  <li class="active">Novo</li>
+    <li><a href="#">Mitra</a></li>
+    <li><a href="@Url.Action("Index")">Entidade Social</a></li>
+    <li class="active">Novo</li>
 </ol>
 
 @using (Html.BeginForm())
@@ -31,7 +31,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(model => model.CNPJ)
-                    @Html.TextBoxFor(model => model.CNPJ, new { @class = "form-control" })
+                    @Html.TextBoxFor(model => model.CNPJ, new { @class = "form-control cnpj", @placeholder = "00.000.000/0000-00" })
                     @Html.ValidationMessageFor(model => model.CNPJ)
                 </div>
             </div>
@@ -51,7 +51,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(model => model.Telefone)
-                    @Html.TextBoxFor(model => model.Telefone, new { @class = "form-control" })
+                    @Html.TextBoxFor(model => model.Telefone, new { @class = "form-control", @placeholder = "(00) 00000-0000" })
                     @Html.ValidationMessageFor(model => model.Telefone)
                 </div>
             </div>

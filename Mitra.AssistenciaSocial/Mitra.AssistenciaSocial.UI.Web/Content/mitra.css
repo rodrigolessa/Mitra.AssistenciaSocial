@@ -10,3 +10,11 @@
     min-width: 100px;
 }
 
+.display-label {
+    font-weight: bold;
+}
+
+.display-field {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}

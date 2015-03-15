@@ -5,9 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
+<h2>Excluir</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Deseja realmente excluir este registro?</h3>
 <fieldset>
     <legend>Dependente</legend>
 
@@ -63,7 +63,7 @@
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     <p>
-        <input type="submit" value="Delete" /> |
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
         @Html.ActionLink("Ir para listagem", "Index")
     </p>
 }

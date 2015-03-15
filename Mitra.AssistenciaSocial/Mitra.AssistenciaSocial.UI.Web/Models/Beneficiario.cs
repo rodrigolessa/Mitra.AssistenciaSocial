@@ -76,21 +76,36 @@ namespace Mitra.AssistenciaSocial.UI.Web.Models
         public string TipoDeConstrucaoOutrosImoveis { get; set; }
         [DisplayName("Possui Veículo")]
         public Nullable<bool> PossuiVeiculo { get; set; }
+        [DisplayName("Utilização do Veículo")]
         public string UtilizacaoDoVeiculo { get; set; }
+        [DisplayName("Ano do Veículo")]
         public Nullable<int> AnoDoVeiculo { get; set; }
+        [DisplayName("Modulo do Veículo")]
         public string ModeloDoVeiculo { get; set; }
+        [DisplayName("Possui Convênio Médico")]
         public Nullable<bool> PossuiConvenioMedico { get; set; }
+        [DisplayName("Nome do Convênio Médico")]
         public string NomeDoConvenioMedico { get; set; }
+        [DisplayName("Tratamento Médico")]
         public string TratamentoMedico { get; set; }
+        [DisplayName("Qual Tipo de Doença")]
         public string QualTipoDeDoenca { get; set; }
+        [DisplayName("Medicmaneto de Uso Contínuo")]
         public string MedicamentoDeUsoContinuo { get; set; }
+        [DisplayName("Como Adquire Medicamentos")]
         public string ComoAdquireMedicamentos { get; set; }
+        [DisplayName("Especificar Como Adquire Medicamentos")]
         public string EspecificarComoAdquireMedicamentos { get; set; }
+        [DisplayName("Informações Adicionais")]
         public string InformacoesAdicionais { get; set; }
+        [DisplayName("Data De Cadastro")]
         public Nullable<System.DateTime> DataDeCadastro { get; set; }
         public virtual ICollection<Dependente> Dependentes { get; set; }
+        [DisplayName("Filiações")]
         public virtual ICollection<Filiacao> Filiacaos { get; set; }
+        [DisplayName("Entidade Social")]
         public virtual EntidadeSocial EntidadeSocial { get; set; }
+        [DisplayName("Tipo de Assistência")]
         public virtual TipoDeAssistencia TipoDeAssistencia { get; set; }
     }
 }
