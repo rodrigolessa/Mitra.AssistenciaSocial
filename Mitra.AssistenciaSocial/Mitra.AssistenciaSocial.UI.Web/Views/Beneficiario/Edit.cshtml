@@ -19,27 +19,7 @@
 
         @Html.HiddenFor(model => model.Id)
 
-        <h2>Ficha Cadastral de Assistência Social</h2>
 
-        <div class="row">
-
-            <div class="col-md-8">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.id_entidade_social, "EntidadeSocial")
-                    @Html.DropDownList("id_entidade_social", null, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.id_entidade_social)
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.id_tipo_assistencia, "TipoDeAssistencia")
-                    @Html.DropDownList("id_tipo_assistencia", null, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.id_tipo_assistencia)
-                </div>
-            </div>
-
-        </div>
 
         <h2>1. Identificação do Beneficiário</h2>
 

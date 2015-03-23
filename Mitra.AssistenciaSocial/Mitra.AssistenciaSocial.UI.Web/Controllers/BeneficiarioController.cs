@@ -20,7 +20,7 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
 
         public ActionResult Index()
         {
-            var beneficiarios = db.Beneficiarios.Include(b => b.EntidadeSocial).Include(b => b.TipoDeAssistencia);
+            var beneficiarios = db.Beneficiarios;//.Include(b => b.EntidadeSocial).Include(b => b.TipoDeAssistencia);
             return View(beneficiarios.ToList());
         }
 
@@ -82,8 +82,8 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", beneficiario.id_entidade_social);
-            ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao", beneficiario.id_tipo_assistencia);
+            //ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", beneficiario.id_entidade_social);
+            //ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao", beneficiario.id_tipo_assistencia);
 
             ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
             ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
@@ -116,8 +116,8 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", beneficiario.id_entidade_social);
-            ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao", beneficiario.id_tipo_assistencia);
+            //ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", beneficiario.id_entidade_social);
+            //ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao", beneficiario.id_tipo_assistencia);
 
             ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
             ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
@@ -153,8 +153,8 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", beneficiario.id_entidade_social);
-            ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao", beneficiario.id_tipo_assistencia);
+            //ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", beneficiario.id_entidade_social);
+            //ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao", beneficiario.id_tipo_assistencia);
 
             ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
             ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();

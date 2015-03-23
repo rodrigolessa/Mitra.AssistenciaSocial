@@ -1,8 +1,8 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using Mitra.AssistenciaSocial.UI.Web.Models.Mapping;
+using ReverseCodeFirst.Models.Mapping;
 
-namespace Mitra.AssistenciaSocial.UI.Web.Models
+namespace ReverseCodeFirst.Models
 {
     public partial class MitraContext : DbContext
     {
@@ -23,6 +23,9 @@ namespace Mitra.AssistenciaSocial.UI.Web.Models
         public DbSet<Filiacao> Filiacaos { get; set; }
         public DbSet<TipoDeAssistencia> TipoDeAssistencias { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
+        public DbSet<webpages_Membership> webpages_Membership { get; set; }
+        public DbSet<webpages_OAuthMembership> webpages_OAuthMembership { get; set; }
+        public DbSet<webpages_Roles> webpages_Roles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -32,6 +35,10 @@ namespace Mitra.AssistenciaSocial.UI.Web.Models
             modelBuilder.Configurations.Add(new EntidadeSocialMap());
             modelBuilder.Configurations.Add(new FiliacaoMap());
             modelBuilder.Configurations.Add(new TipoDeAssistenciaMap());
+            modelBuilder.Configurations.Add(new UserProfileMap());
+            modelBuilder.Configurations.Add(new webpages_MembershipMap());
+            modelBuilder.Configurations.Add(new webpages_OAuthMembershipMap());
+            modelBuilder.Configurations.Add(new webpages_RolesMap());
         }
     }
 }

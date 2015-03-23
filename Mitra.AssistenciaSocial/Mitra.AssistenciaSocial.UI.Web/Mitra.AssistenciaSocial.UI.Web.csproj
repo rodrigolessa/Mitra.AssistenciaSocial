@@ -182,6 +182,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AssistenciaPorMesController.cs" />
     <Compile Include="Controllers\BeneficiarioController.cs" />
     <Compile Include="Controllers\DependenteController.cs" />
     <Compile Include="Controllers\EntidadeSocialController.cs" />
@@ -193,6 +194,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AssistenciaPorMe.cs" />
     <Compile Include="Models\Beneficiario.cs" />
     <Compile Include="Models\Dependente.cs" />
     <Compile Include="Models\EntidadeSocial.cs" />
@@ -203,6 +205,7 @@
     <Compile Include="Models\ListItem\GrauDeInstrucaoListItem.cs" />
     <Compile Include="Models\ListItem\HorarioDeTrabalhoListItem.cs" />
     <Compile Include="Models\ListItem\ParentescoListItem.cs" />
+    <Compile Include="Models\Mapping\AssistenciaPorMeMap.cs" />
     <Compile Include="Models\Mapping\BeneficiarioMap.cs" />
     <Compile Include="Models\Mapping\DependenteMap.cs" />
     <Compile Include="Models\Mapping\EntidadeSocialMap.cs" />
@@ -364,6 +367,11 @@
     <Content Include="Views\Filiacao\Create.cshtml" />
     <Content Include="Views\Filiacao\Edit.cshtml" />
     <Content Include="Views\Filiacao\Delete.cshtml" />
+    <Content Include="Views\AssistenciaPorMes\Index.cshtml" />
+    <Content Include="Views\AssistenciaPorMes\Details.cshtml" />
+    <Content Include="Views\AssistenciaPorMes\Create.cshtml" />
+    <Content Include="Views\AssistenciaPorMes\Edit.cshtml" />
+    <Content Include="Views\AssistenciaPorMes\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

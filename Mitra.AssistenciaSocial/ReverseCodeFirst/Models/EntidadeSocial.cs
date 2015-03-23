@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 
-namespace Mitra.AssistenciaSocial.UI.Web.Models
+namespace ReverseCodeFirst.Models
 {
     public partial class EntidadeSocial
     {
@@ -14,7 +13,6 @@ namespace Mitra.AssistenciaSocial.UI.Web.Models
 
         public int Id { get; set; }
         public string Nome { get; set; }
-        [DisplayName("Endereço")]
         public string Endereco { get; set; }
         public string Telefone { get; set; }
         public string CNPJ { get; set; }

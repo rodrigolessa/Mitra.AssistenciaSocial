@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
-namespace Mitra.AssistenciaSocial.UI.Web.Models.Mapping
+namespace ReverseCodeFirst.Models.Mapping
 {
     public class BeneficiarioMap : EntityTypeConfiguration<Beneficiario>
     {
