@@ -22,7 +22,7 @@ namespace Mitra.AssistenciaSocial.UI.Web.Models
         public DbSet<EntidadeSocial> EntidadeSocials { get; set; }
         public DbSet<Filiacao> Filiacaos { get; set; }
         public DbSet<TipoDeAssistencia> TipoDeAssistencias { get; set; }
-        public DbSet<UserProfile> UserProfiles { get; set; }
+        //public DbSet<UserProfile> UserProfiles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
