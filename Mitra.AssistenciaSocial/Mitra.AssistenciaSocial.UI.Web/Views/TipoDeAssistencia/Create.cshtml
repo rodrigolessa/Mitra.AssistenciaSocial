@@ -22,9 +22,29 @@
 
             <div class="col-md-12">
                 <div class="form-group">
+                    @Html.LabelFor(model => model.id_entidade_social, "EntidadeSocial")
+                    @Html.DropDownList("id_entidade_social", null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.id_entidade_social)
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <div class="form-group">
                     @Html.LabelFor(model => model.Descricao)
                     @Html.TextBoxFor(model => model.Descricao, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.Descricao)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Unidade)
+                    @Html.TextBoxFor(model => model.Unidade, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Unidade)
                 </div>
             </div>
 

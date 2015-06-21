@@ -16,7 +16,13 @@
 <table class="table table-striped">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.EntidadeSocial.Nome)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Unidade)
         </th>
         <th></th>
     </tr>
@@ -24,7 +30,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.EntidadeSocial.Nome)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Unidade)
         </td>
         <td>
             @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |

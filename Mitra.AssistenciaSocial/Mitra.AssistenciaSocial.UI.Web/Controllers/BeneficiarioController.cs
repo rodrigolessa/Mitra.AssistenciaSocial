@@ -20,8 +20,7 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
 
         public ActionResult Index()
         {
-            var beneficiarios = db.Beneficiarios;//.Include(b => b.EntidadeSocial).Include(b => b.TipoDeAssistencia);
-            return View(beneficiarios.ToList());
+            return View(db.Beneficiarios.ToList());
         }
 
         //
@@ -42,8 +41,12 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome");
-            ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao");
+            //ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome");
+            //ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao");
+            ViewBag.BeneficioDeEntidade = BitListItem.Obter();
+            ViewBag.PossuiOutrosImoveis = BitListItem.Obter();
+            ViewBag.PossuiVeiculo = BitListItem.Obter();
+            ViewBag.PossuiConvenioMedico = BitListItem.Obter();
 
             ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
             ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
@@ -72,7 +75,6 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         // POST: /Beneficiario/Create
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create(Beneficiario beneficiario)
         {
             if (ModelState.IsValid)
@@ -144,7 +146,6 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         // POST: /Beneficiario/Edit/5
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Edit(Beneficiario beneficiario)
         {
             if (ModelState.IsValid)
@@ -194,7 +195,6 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         // POST: /Beneficiario/Delete/5
 
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Beneficiario beneficiario = db.Beneficiarios.Find(id);

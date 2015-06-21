@@ -50,7 +50,6 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         // POST: /AssistenciaPorMes/Create
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create(AssistenciaPorMe assistenciaporme)
         {
             if (ModelState.IsValid)
@@ -86,7 +85,6 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         // POST: /AssistenciaPorMes/Edit/5
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Edit(AssistenciaPorMe assistenciaporme)
         {
             if (ModelState.IsValid)
@@ -118,7 +116,6 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         // POST: /AssistenciaPorMes/Delete/5
 
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             AssistenciaPorMe assistenciaporme = db.AssistenciaPorMes.Find(id);

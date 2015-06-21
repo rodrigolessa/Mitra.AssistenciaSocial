@@ -18,28 +18,6 @@
 
     <fieldset>
 
-        <h2>Ficha Cadastral de Assistência Social</h2>
-
-        <div class="row">
-
-            <div class="col-md-8">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.id_entidade_social, "EntidadeSocial")
-                    @Html.DropDownList("id_entidade_social", null, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.id_entidade_social)
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.id_tipo_assistencia, "TipoDeAssistencia")
-                    @Html.DropDownList("id_tipo_assistencia", null, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.id_tipo_assistencia)
-                </div>
-            </div>
-
-        </div>
-
         <h2>1. Identificação do Beneficiário</h2>
 
         <div class="row">
@@ -332,21 +310,17 @@
 
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-2">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.BeneficioDeEntidade)
-                    @Html.EditorFor(model => model.BeneficioDeEntidade)
+                    @Html.DropDownList("BeneficioDeEntidade", null, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.BeneficioDeEntidade)
                 </div>
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-10">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.TipoDeBeneficioDaEntidade)
@@ -373,9 +347,8 @@
         </div>
 
 
+
         <h2>4. Situação Habitacional</h2>
-
-
 
         <div class="row">
 
@@ -407,7 +380,7 @@
 
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-4">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.TipoDeConstrucao)
@@ -417,11 +390,7 @@
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-4">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.PisoDaConstrucao)
@@ -431,11 +400,7 @@
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-4">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.CoberturaDaConstrucao)
@@ -449,7 +414,7 @@
 
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-6">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.NumeroDeComodosDaConstrucao)
@@ -459,11 +424,7 @@
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-6">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.ComodosDaConstrucao)
@@ -477,7 +438,7 @@
 
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-4">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.EsgotoDaConstrucao)
@@ -487,11 +448,7 @@
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-4">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.AguaDaConstrucao)
@@ -501,11 +458,7 @@
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-4">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.BanheiroDaConstrucao)
@@ -519,7 +472,7 @@
 
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-6">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.EnergiaEletricaDaConstrucao)
@@ -529,11 +482,7 @@
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-6">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.LixoDaConstrucao)
@@ -545,27 +494,22 @@
 
         </div>
 
+
         <h2>5. Bens da Família</h2>
-
-
 
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-2">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.PossuiOutrosImoveis)
-                    @Html.EditorFor(model => model.PossuiOutrosImoveis)
+                    @Html.DropDownList("PossuiOutrosImoveis", null, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.PossuiOutrosImoveis)
                 </div>
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-10">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.TipoDeConstrucaoOutrosImoveis)
@@ -579,21 +523,17 @@
 
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-2">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.PossuiVeiculo)
-                    @Html.EditorFor(model => model.PossuiVeiculo)
+                    @Html.DropDownList("PossuiVeiculo", null, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.PossuiVeiculo)
                 </div>
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-10">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.UtilizacaoDoVeiculo)
@@ -607,7 +547,7 @@
 
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-6">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.AnoDoVeiculo)
@@ -617,11 +557,7 @@
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-6">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.ModeloDoVeiculo)
@@ -633,25 +569,22 @@
 
         </div>
 
+
         <h2>6. Saúde da Família</h2>
 
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-2">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.PossuiConvenioMedico)
-                    @Html.EditorFor(model => model.PossuiConvenioMedico, new { @class = "form-control" })
+                    @Html.DropDownList("PossuiConvenioMedico", null, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.PossuiConvenioMedico)
                 </div>
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-10">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.NomeDoConvenioMedico)
@@ -665,7 +598,7 @@
 
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-4">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.TratamentoMedico)
@@ -675,11 +608,7 @@
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-4">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.QualTipoDeDoenca)
@@ -689,11 +618,7 @@
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-4">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.MedicamentoDeUsoContinuo)
@@ -707,7 +632,7 @@
 
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-4">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.ComoAdquireMedicamentos)
@@ -717,11 +642,7 @@
 
             </div>
 
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
+            <div class="col-md-8">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.EspecificarComoAdquireMedicamentos)

@@ -1,4 +1,5 @@
-        <h2>Ficha Cadastral de Assistência Social</h2>
+	//ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome");
+	//ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao");
 
         <div class="row">
 
@@ -19,3 +20,43 @@
             </div>
 
         </div>
+
+BeneficioDeEntidade (Bit)
+
+TipoDeResidencia
+TipoDeConstrucao
+PisoDaConstrucao
+CoberturaDaConstrucao
+EsgotoDaConstrucao
+AguaDaConstrucao
+BanheiroDaConstrucao
+EnergiaEletricaDaConstrucao
+LixoDaConstrucao
+
+PossuiOutrosImoveis (Bit)
+TipoDeConstrucaoOutrosImoveis
+
+PossuiVeiculo(Bit)
+UtilizacaoDoVeiculo
+
+PossuiConvenioMedico(Bit)
+
+ComoAdquireMedicamentos
+
+
+
+
+            ViewBag.CorListItem
+            ViewBag.EstadoListItem
+            ViewBag.TipoDeResidenciaListItem
+            ViewBag.TipoDeConstrucaoListItem
+            ViewBag.PisoDaConstrucaoListItem
+            ViewBag.CoberturaDaConstrucaoListItem
+            ViewBag.EsgotoDaConstrucaoListItem
+            ViewBag.AguaDaConstrucaoListItem
+            ViewBag.BanheiroDaConstrucaoListItem
+            ViewBag.EnergiaEletricaDaConstrucaoListItem
+            ViewBag.LixoDaConstrucaoListItem
+            ViewBag.TipoDeConstrucaoOutrosImoveisListItem
+            ViewBag.UtilizacaoDoVeiculoListItem
+            ViewBag.ComoAdquireMedicamentosListItem

@@ -19,7 +19,8 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
 
         public ActionResult Index()
         {
-            return View(db.TipoDeAssistencias.ToList());
+            var tipodeassistencias = db.TipoDeAssistencias.Include(t => t.EntidadeSocial);
+            return View(tipodeassistencias.ToList());
         }
 
         //
@@ -40,6 +41,7 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome");
             return View();
         }
 
@@ -47,7 +49,6 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         // POST: /TipoDeAssistencia/Create
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create(TipoDeAssistencia tipodeassistencia)
         {
             if (ModelState.IsValid)
@@ -57,6 +58,7 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", tipodeassistencia.id_entidade_social);
             return View(tipodeassistencia);
         }
 
@@ -70,6 +72,7 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", tipodeassistencia.id_entidade_social);
             return View(tipodeassistencia);
         }
 
@@ -77,7 +80,6 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         // POST: /TipoDeAssistencia/Edit/5
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Edit(TipoDeAssistencia tipodeassistencia)
         {
             if (ModelState.IsValid)
@@ -86,6 +88,7 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", tipodeassistencia.id_entidade_social);
             return View(tipodeassistencia);
         }
 
@@ -106,7 +109,6 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         // POST: /TipoDeAssistencia/Delete/5
 
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             TipoDeAssistencia tipodeassistencia = db.TipoDeAssistencias.Find(id);

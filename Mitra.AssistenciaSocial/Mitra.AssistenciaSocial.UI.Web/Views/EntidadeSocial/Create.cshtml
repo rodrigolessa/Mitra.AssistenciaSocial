@@ -40,7 +40,7 @@
 
         <div class="row">
 
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="form-group">
                     @Html.LabelFor(model => model.Endereco)
                     @Html.TextBoxFor(model => model.Endereco, new { @class = "form-control" })
@@ -53,6 +53,36 @@
                     @Html.LabelFor(model => model.Telefone)
                     @Html.TextBoxFor(model => model.Telefone, new { @class = "form-control", @placeholder = "(00) 00000-0000" })
                     @Html.ValidationMessageFor(model => model.Telefone)
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.QuantidadeDeMembros)
+                    @Html.TextBoxFor(model => model.QuantidadeDeMembros, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.QuantidadeDeMembros)
+                </div>
+            </div>
+
+        </div>
+
+        <h3>Coordenador</h3>
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Coordenador)
+                    @Html.TextBoxFor(model => model.Coordenador, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Coordenador)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TelefoneCoordenador)
+                    @Html.TextBoxFor(model => model.TelefoneCoordenador, new { @class = "form-control", @placeholder = "(00) 00000-0000" })
+                    @Html.ValidationMessageFor(model => model.TelefoneCoordenador)
                 </div>
             </div>
 

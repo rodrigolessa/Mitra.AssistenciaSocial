@@ -33,8 +33,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.4 - Testes Automatizados"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mitra.AssistenciaSocial.UI.Web", "Mitra.AssistenciaSocial.UI.Web\Mitra.AssistenciaSocial.UI.Web.csproj", "{BAFA1776-A8C6-4D38-8E25-27AD45F081C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseCodeFirst", "ReverseCodeFirst\ReverseCodeFirst.csproj", "{EC4ED978-55CC-46A6-B82D-64262FFB6F58}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,10 +43,6 @@ Global
 		{BAFA1776-A8C6-4D38-8E25-27AD45F081C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAFA1776-A8C6-4D38-8E25-27AD45F081C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAFA1776-A8C6-4D38-8E25-27AD45F081C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC4ED978-55CC-46A6-B82D-64262FFB6F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC4ED978-55CC-46A6-B82D-64262FFB6F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC4ED978-55CC-46A6-B82D-64262FFB6F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC4ED978-55CC-46A6-B82D-64262FFB6F58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +59,5 @@ Global
 		{51557F2B-4A31-4DE2-8F71-D1E8CABEE3C6} = {0315BAC7-D9FA-4F9E-AAA4-E76C372D8ACB}
 		{FA64AA30-9C1D-402D-B45B-2BD5E3841410} = {0315BAC7-D9FA-4F9E-AAA4-E76C372D8ACB}
 		{BAFA1776-A8C6-4D38-8E25-27AD45F081C8} = {A45DBBAA-CBB6-4599-B63C-3C8C58D8CF65}
-		{EC4ED978-55CC-46A6-B82D-64262FFB6F58} = {5D63FD77-A566-40B9-8A2D-D55806670F7E}
 	EndGlobalSection
 EndGlobal
