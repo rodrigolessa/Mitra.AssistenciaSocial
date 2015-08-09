@@ -81,7 +81,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(model => model.TelefoneCoordenador)
-                    @Html.TextBoxFor(model => model.TelefoneCoordenador, new { @class = "form-control", @placeholder = "(00) 00000-0000" })
+                    @Html.TextBoxFor(model => model.TelefoneCoordenador, new { @class = "form-control phone_with_ddd", @placeholder = "(00) 0000-0000" })
                     @Html.ValidationMessageFor(model => model.TelefoneCoordenador)
                 </div>
             </div>

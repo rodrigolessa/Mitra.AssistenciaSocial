@@ -220,6 +220,7 @@
     <Compile Include="Models\ListItem\LixoDaConstrucaoListItem.cs" />
     <Compile Include="Models\ListItem\ParentescoListItem.cs" />
     <Compile Include="Models\ListItem\PisoDaConstrucaoListItem.cs" />
+    <Compile Include="Models\ListItem\RendaFamiliarListItem.cs" />
     <Compile Include="Models\ListItem\TipoDeConstrucaoListItem.cs" />
     <Compile Include="Models\ListItem\TipoDeConstrucaoOutrosImoveisListItem.cs" />
     <Compile Include="Models\ListItem\TipoDeResidenciaListItem.cs" />

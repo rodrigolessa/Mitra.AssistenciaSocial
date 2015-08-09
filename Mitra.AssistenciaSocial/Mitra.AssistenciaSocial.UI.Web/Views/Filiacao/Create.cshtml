@@ -63,7 +63,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(model => model.DataDeNascimento)
-                    @Html.TextBoxFor(model => model.DataDeNascimento, new { @class = "form-control" })
+                    @Html.TextBoxFor(model => model.DataDeNascimento, new { @class = "form-control date", @placeholder = "00/00/0000" })
                     @Html.ValidationMessageFor(model => model.DataDeNascimento)
                 </div>
             </div>
@@ -71,7 +71,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(model => model.Telefone)
-                    @Html.TextBoxFor(model => model.Telefone, new { @class = "form-control" })
+                    @Html.TextBoxFor(model => model.Telefone, new { @class = "form-control phone_with_ddd", @placeholder = "(00) 0000-0000" })
                     @Html.ValidationMessageFor(model => model.Telefone)
                 </div>
             </div>

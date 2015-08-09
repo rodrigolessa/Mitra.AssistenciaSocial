@@ -42,7 +42,7 @@
             @Html.LabelFor(model => model.Data)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Data)
+            @Html.EditorFor(model => model.Data, new { @class = "form-control date", @placeholder = "00/00/0000" })
             @Html.ValidationMessageFor(model => model.Data)
         </div>
 
