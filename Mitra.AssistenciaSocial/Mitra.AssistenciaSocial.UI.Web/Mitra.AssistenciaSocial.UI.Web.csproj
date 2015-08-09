@@ -39,10 +39,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -60,9 +67,6 @@
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -236,6 +240,174 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\mitra.css" />
+    <Content Include="Content\pace\templates\pace-theme-barber-shop.tmpl.css" />
+    <Content Include="Content\pace\templates\pace-theme-big-counter.tmpl.css" />
+    <Content Include="Content\pace\templates\pace-theme-bounce.tmpl.css" />
+    <Content Include="Content\pace\templates\pace-theme-center-atom.tmpl.css" />
+    <Content Include="Content\pace\templates\pace-theme-center-circle.tmpl.css" />
+    <Content Include="Content\pace\templates\pace-theme-center-radar.tmpl.css" />
+    <Content Include="Content\pace\templates\pace-theme-center-simple.tmpl.css" />
+    <Content Include="Content\pace\templates\pace-theme-corner-indicator.tmpl.css" />
+    <Content Include="Content\pace\templates\pace-theme-fill-left.tmpl.css" />
+    <Content Include="Content\pace\templates\pace-theme-flash.tmpl.css" />
+    <Content Include="Content\pace\templates\pace-theme-flat-top.tmpl.css" />
+    <Content Include="Content\pace\templates\pace-theme-loading-bar.tmpl.css" />
+    <Content Include="Content\pace\templates\pace-theme-mac-osx.tmpl.css" />
+    <Content Include="Content\pace\templates\pace-theme-minimal.tmpl.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-barber-shop.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-big-counter.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-bounce.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-center-atom.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-center-circle.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-center-radar.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-center-simple.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-corner-indicator.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-fill-left.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-flash.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-flat-top.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-loading-bar.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-mac-osx.css" />
+    <Content Include="Content\pace\themes\black\pace-theme-minimal.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-barber-shop.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-big-counter.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-bounce.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-center-atom.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-center-circle.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-center-radar.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-center-simple.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-corner-indicator.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-fill-left.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-flash.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-flat-top.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-loading-bar.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-mac-osx.css" />
+    <Content Include="Content\pace\themes\blue\pace-theme-minimal.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-barber-shop.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-big-counter.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-bounce.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-center-atom.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-center-circle.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-center-radar.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-center-simple.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-corner-indicator.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-fill-left.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-flash.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-flat-top.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-loading-bar.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-mac-osx.css" />
+    <Content Include="Content\pace\themes\green\pace-theme-minimal.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-barber-shop.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-big-counter.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-bounce.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-center-atom.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-center-circle.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-center-radar.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-center-simple.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-corner-indicator.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-fill-left.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-flash.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-flat-top.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-loading-bar.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-mac-osx.css" />
+    <Content Include="Content\pace\themes\orange\pace-theme-minimal.css" />
+    <Content Include="Content\pace\themes\pace-theme-barber-shop.css" />
+    <Content Include="Content\pace\themes\pace-theme-big-counter.css" />
+    <Content Include="Content\pace\themes\pace-theme-bounce.css" />
+    <Content Include="Content\pace\themes\pace-theme-center-atom.css" />
+    <Content Include="Content\pace\themes\pace-theme-center-circle.css" />
+    <Content Include="Content\pace\themes\pace-theme-center-radar.css" />
+    <Content Include="Content\pace\themes\pace-theme-center-simple.css" />
+    <Content Include="Content\pace\themes\pace-theme-corner-indicator.css" />
+    <Content Include="Content\pace\themes\pace-theme-fill-left.css" />
+    <Content Include="Content\pace\themes\pace-theme-flash.css" />
+    <Content Include="Content\pace\themes\pace-theme-flat-top.css" />
+    <Content Include="Content\pace\themes\pace-theme-loading-bar.css" />
+    <Content Include="Content\pace\themes\pace-theme-mac-osx.css" />
+    <Content Include="Content\pace\themes\pace-theme-minimal.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-barber-shop.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-big-counter.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-bounce.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-center-atom.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-center-circle.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-center-radar.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-center-simple.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-corner-indicator.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-fill-left.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-flash.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-flat-top.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-loading-bar.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-mac-osx.css" />
+    <Content Include="Content\pace\themes\pink\pace-theme-minimal.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-barber-shop.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-big-counter.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-bounce.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-center-atom.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-center-circle.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-center-radar.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-center-simple.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-corner-indicator.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-fill-left.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-flash.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-flat-top.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-loading-bar.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-mac-osx.css" />
+    <Content Include="Content\pace\themes\purple\pace-theme-minimal.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-barber-shop.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-big-counter.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-bounce.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-center-atom.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-center-circle.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-center-radar.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-center-simple.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-corner-indicator.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-fill-left.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-flash.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-flat-top.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-loading-bar.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-mac-osx.css" />
+    <Content Include="Content\pace\themes\red\pace-theme-minimal.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-barber-shop.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-big-counter.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-bounce.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-center-atom.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-center-circle.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-center-radar.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-center-simple.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-corner-indicator.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-fill-left.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-flash.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-flat-top.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-loading-bar.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-mac-osx.css" />
+    <Content Include="Content\pace\themes\silver\pace-theme-minimal.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-barber-shop.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-big-counter.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-bounce.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-center-atom.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-center-circle.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-center-radar.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-center-simple.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-corner-indicator.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-fill-left.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-flash.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-flat-top.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-loading-bar.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-mac-osx.css" />
+    <Content Include="Content\pace\themes\white\pace-theme-minimal.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-barber-shop.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-big-counter.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-bounce.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-center-atom.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-center-circle.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-center-radar.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-center-simple.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-corner-indicator.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-fill-left.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-flash.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-flat-top.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-loading-bar.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-mac-osx.css" />
+    <Content Include="Content\pace\themes\yellow\pace-theme-minimal.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -299,17 +471,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\comuns.js" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.mask.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -318,6 +493,8 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\pace.js" />
+    <Content Include="Scripts\pace.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -387,6 +564,7 @@
     <Content Include="Views\AssistenciaPorMes\Create.cshtml" />
     <Content Include="Views\AssistenciaPorMes\Edit.cshtml" />
     <Content Include="Views\AssistenciaPorMes\Delete.cshtml" />
+    <Content Include="Scripts\pace.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

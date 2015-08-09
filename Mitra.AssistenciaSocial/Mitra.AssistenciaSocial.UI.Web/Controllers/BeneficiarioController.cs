@@ -43,28 +43,28 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
         {
             //ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome");
             //ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao");
-            ViewBag.BeneficioDeEntidade = BitListItem.Obter();
-            ViewBag.PossuiOutrosImoveis = BitListItem.Obter();
-            ViewBag.PossuiVeiculo = BitListItem.Obter();
-            ViewBag.PossuiConvenioMedico = BitListItem.Obter();
+            //ViewBag.BeneficioDeEntidade = BitListItem.Obter();
+            //ViewBag.PossuiOutrosImoveis = BitListItem.Obter();
+            //ViewBag.PossuiVeiculo = BitListItem.Obter();
+            //ViewBag.PossuiConvenioMedico = BitListItem.Obter();
 
             ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
             ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
-            ViewBag.Cor = new List<SelectListItem>();
+            ViewBag.Cor = CorListItem.Obter();
             ViewBag.Sexo = GeneroListItem.Obter();
-            ViewBag.Estado = new List<SelectListItem>();
-            ViewBag.TipoDeResidencia = new List<SelectListItem>();
-            ViewBag.TipoDeConstrucao = new List<SelectListItem>();
-            ViewBag.PisoDaConstrucao = new List<SelectListItem>();
-            ViewBag.CoberturaDaConstrucao = new List<SelectListItem>();
-            ViewBag.EsgotoDaConstrucao = new List<SelectListItem>();
-            ViewBag.AguaDaConstrucao = new List<SelectListItem>();
-            ViewBag.BanheiroDaConstrucao = new List<SelectListItem>();
-            ViewBag.EnergiaEletricaDaConstrucao = new List<SelectListItem>();
-            ViewBag.LixoDaConstrucao = new List<SelectListItem>();
-            ViewBag.TipoDeConstrucaoOutrosImoveis = new List<SelectListItem>();
-            ViewBag.UtilizacaoDoVeiculo = new List<SelectListItem>();
-            ViewBag.ComoAdquireMedicamentos = new List<SelectListItem>();
+            ViewBag.Estado = EstadoListItem.Obter();
+            ViewBag.TipoDeResidencia = TipoDeResidenciaListItem.Obter();
+            ViewBag.TipoDeConstrucao = TipoDeConstrucaoListItem.Obter();
+            ViewBag.PisoDaConstrucao = PisoDaConstrucaoListItem.Obter();
+            ViewBag.CoberturaDaConstrucao = CoberturaDaConstrucaoListItem.Obter();
+            ViewBag.EsgotoDaConstrucao = EsgotoDaConstrucaoListItem.Obter();
+            ViewBag.AguaDaConstrucao = AguaDaConstrucaoListItem.Obter();
+            ViewBag.BanheiroDaConstrucao = BanheiroDaConstrucaoListItem.Obter();
+            ViewBag.EnergiaEletricaDaConstrucao = EnergiaEletricaDaConstrucaoListItem.Obter();
+            ViewBag.LixoDaConstrucao = LixoDaConstrucaoListItem.Obter();
+            ViewBag.TipoDeConstrucaoOutrosImoveis = TipoDeConstrucaoOutrosImoveisListItem.Obter();
+            ViewBag.UtilizacaoDoVeiculo = UtilizacaoDoVeiculoListItem.Obter();
+            ViewBag.ComoAdquireMedicamentos = ComoAdquireMedicamentosListItem.Obter();
 
             var beneficiario = new Beneficiario();
 
@@ -86,24 +86,28 @@ namespace Mitra.AssistenciaSocial.UI.Web.Controllers
 
             //ViewBag.id_entidade_social = new SelectList(db.EntidadeSocials, "Id", "Nome", beneficiario.id_entidade_social);
             //ViewBag.id_tipo_assistencia = new SelectList(db.TipoDeAssistencias, "Id", "Descricao", beneficiario.id_tipo_assistencia);
+            //ViewBag.BeneficioDeEntidade = BitListItem.Obter();
+            //ViewBag.PossuiOutrosImoveis = BitListItem.Obter();
+            //ViewBag.PossuiVeiculo = BitListItem.Obter();
+            //ViewBag.PossuiConvenioMedico = BitListItem.Obter();
 
             ViewBag.EstadoCivil = EstadoCivilListItem.Obter();
             ViewBag.GrauDeInstrucao = GrauDeInstrucaoListItem.Obter();
-            ViewBag.Cor = new List<SelectListItem>();
+            ViewBag.Cor = CorListItem.Obter();
             ViewBag.Sexo = GeneroListItem.Obter();
-            ViewBag.Estado = new List<SelectListItem>();
-            ViewBag.TipoDeResidencia = new List<SelectListItem>();
-            ViewBag.TipoDeConstrucao = new List<SelectListItem>();
-            ViewBag.PisoDaConstrucao = new List<SelectListItem>();
-            ViewBag.CoberturaDaConstrucao = new List<SelectListItem>();
-            ViewBag.EsgotoDaConstrucao = new List<SelectListItem>();
-            ViewBag.AguaDaConstrucao = new List<SelectListItem>();
-            ViewBag.BanheiroDaConstrucao = new List<SelectListItem>();
-            ViewBag.EnergiaEletricaDaConstrucao = new List<SelectListItem>();
-            ViewBag.LixoDaConstrucao = new List<SelectListItem>();
-            ViewBag.TipoDeConstrucaoOutrosImoveis = new List<SelectListItem>();
-            ViewBag.UtilizacaoDoVeiculo = new List<SelectListItem>();
-            ViewBag.ComoAdquireMedicamentos = new List<SelectListItem>();
+            ViewBag.Estado = EstadoListItem.Obter();
+            ViewBag.TipoDeResidencia = TipoDeResidenciaListItem.Obter();
+            ViewBag.TipoDeConstrucao = TipoDeConstrucaoListItem.Obter();
+            ViewBag.PisoDaConstrucao = PisoDaConstrucaoListItem.Obter();
+            ViewBag.CoberturaDaConstrucao = CoberturaDaConstrucaoListItem.Obter();
+            ViewBag.EsgotoDaConstrucao = EsgotoDaConstrucaoListItem.Obter();
+            ViewBag.AguaDaConstrucao = AguaDaConstrucaoListItem.Obter();
+            ViewBag.BanheiroDaConstrucao = BanheiroDaConstrucaoListItem.Obter();
+            ViewBag.EnergiaEletricaDaConstrucao = EnergiaEletricaDaConstrucaoListItem.Obter();
+            ViewBag.LixoDaConstrucao = LixoDaConstrucaoListItem.Obter();
+            ViewBag.TipoDeConstrucaoOutrosImoveis = TipoDeConstrucaoOutrosImoveisListItem.Obter();
+            ViewBag.UtilizacaoDoVeiculo = UtilizacaoDoVeiculoListItem.Obter();
+            ViewBag.ComoAdquireMedicamentos = ComoAdquireMedicamentosListItem.Obter();
 
             return View(beneficiario);
         }

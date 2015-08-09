@@ -37,7 +37,7 @@
             <div class="col-md-3">
                 <div class="form-group">
                     @Html.LabelFor(model => model.DataDeNascimento)
-                    @Html.TextBoxFor(model => model.DataDeNascimento, new { @class = "form-control" })
+                    @Html.TextBoxFor(model => model.DataDeNascimento, new { @class = "form-control date", @placeholder = "00/00/0000" })
                     @Html.ValidationMessageFor(model => model.DataDeNascimento)
                 </div>
             </div>
@@ -45,7 +45,7 @@
             <div class="col-md-3">
                 <div class="form-group">
                     @Html.LabelFor(model => model.EstadoCivil)
-                    @Html.DropDownList("EstadoCivil", null, new { @class = "form-control" })
+                    @Html.DropDownList("EstadoCivil", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.EstadoCivil)
                 </div>
             </div>
@@ -53,7 +53,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     @Html.LabelFor(model => model.GrauDeInstrucao)
-                    @Html.DropDownList("GrauDeInstrucao", null, new { @class = "form-control" })
+                    @Html.DropDownList("GrauDeInstrucao", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.GrauDeInstrucao)
                 </div>
             </div>
@@ -73,7 +73,7 @@
             <div class="col-md-3">
                 <div class="form-group">
                     @Html.LabelFor(model => model.Cor)
-                    @Html.DropDownList("Cor", null, new { @class = "form-control" })
+                    @Html.DropDownList("Cor", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.Cor)
                 </div>
             </div>
@@ -81,7 +81,7 @@
             <div class="col-md-3">
                 <div class="form-group">
                     @Html.LabelFor(model => model.Sexo)
-                    @Html.DropDownList("Sexo", null, new { @class = "form-control" })
+                    @Html.DropDownList("Sexo", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.Sexo)
                 </div>
             </div>
@@ -93,7 +93,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(model => model.CPF)
-                    @Html.TextBoxFor(model => model.CPF, new { @class = "form-control" })
+                    @Html.TextBoxFor(model => model.CPF, new { @class = "form-control cpf", @placeholder = "000.000.000-00" })
                     @Html.ValidationMessageFor(model => model.CPF)
                 </div>
             </div>
@@ -109,7 +109,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(model => model.Telefone)
-                    @Html.TextBoxFor(model => model.Telefone, new { @class = "form-control" })
+                    @Html.TextBoxFor(model => model.Telefone, new { @class = "form-control phone_with_ddd", @placeholder = "(00) 0000-0000" })
                     @Html.ValidationMessageFor(model => model.Telefone)
                 </div>
             </div>
@@ -151,7 +151,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     @Html.LabelFor(model => model.Estado)
-                    @Html.DropDownList("Estado", null, new { @class = "form-control" })
+                    @Html.DropDownList("Estado", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.Estado)
                 </div>
             </div>
@@ -314,7 +314,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.BeneficioDeEntidade)
-                    @Html.DropDownList("BeneficioDeEntidade", null, new { @class = "form-control" })
+                    @Html.EditorFor(model => model.BeneficioDeEntidade)
                     @Html.ValidationMessageFor(model => model.BeneficioDeEntidade)
                 </div>
 
@@ -356,7 +356,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.TipoDeResidencia)
-                    @Html.DropDownList("TipoDeResidencia", null, new { @class = "form-control" })
+                    @Html.DropDownList("TipoDeResidencia", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.TipoDeResidencia)
                 </div>
 
@@ -384,7 +384,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.TipoDeConstrucao)
-                    @Html.DropDownList("TipoDeConstrucao", null, new { @class = "form-control" })
+                    @Html.DropDownList("TipoDeConstrucao", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.TipoDeConstrucao)
                 </div>
 
@@ -394,7 +394,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.PisoDaConstrucao)
-                    @Html.DropDownList("PisoDaConstrucao", null, new { @class = "form-control" })
+                    @Html.DropDownList("PisoDaConstrucao", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.PisoDaConstrucao)
                 </div>
 
@@ -404,7 +404,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.CoberturaDaConstrucao)
-                    @Html.DropDownList("CoberturaDaConstrucao", null, new { @class = "form-control" })
+                    @Html.DropDownList("CoberturaDaConstrucao", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.CoberturaDaConstrucao)
                 </div>
 
@@ -442,7 +442,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.EsgotoDaConstrucao)
-                    @Html.DropDownList("EsgotoDaConstrucao", null, new { @class = "form-control" })
+                    @Html.DropDownList("EsgotoDaConstrucao", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.EsgotoDaConstrucao)
                 </div>
 
@@ -452,7 +452,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.AguaDaConstrucao)
-                    @Html.DropDownList("AguaDaConstrucao", null, new { @class = "form-control" })
+                    @Html.DropDownList("AguaDaConstrucao", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.AguaDaConstrucao)
                 </div>
 
@@ -462,7 +462,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.BanheiroDaConstrucao)
-                    @Html.DropDownList("BanheiroDaConstrucao", null, new { @class = "form-control" })
+                    @Html.DropDownList("BanheiroDaConstrucao", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.BanheiroDaConstrucao)
                 </div>
 
@@ -476,7 +476,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.EnergiaEletricaDaConstrucao)
-                    @Html.DropDownList("EnergiaEletricaDaConstrucao", null, new { @class = "form-control" })
+                    @Html.DropDownList("EnergiaEletricaDaConstrucao", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.EnergiaEletricaDaConstrucao)
                 </div>
 
@@ -486,7 +486,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.LixoDaConstrucao)
-                    @Html.DropDownList("LixoDaConstrucao", null, new { @class = "form-control" })
+                    @Html.DropDownList("LixoDaConstrucao", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.LixoDaConstrucao)
                 </div>
 
@@ -503,7 +503,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.PossuiOutrosImoveis)
-                    @Html.DropDownList("PossuiOutrosImoveis", null, new { @class = "form-control" })
+                    @Html.EditorFor(model => model.PossuiOutrosImoveis)
                     @Html.ValidationMessageFor(model => model.PossuiOutrosImoveis)
                 </div>
 
@@ -513,7 +513,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.TipoDeConstrucaoOutrosImoveis)
-                    @Html.DropDownList("TipoDeConstrucaoOutrosImoveis", null, new { @class = "form-control" })
+                    @Html.DropDownList("TipoDeConstrucaoOutrosImoveis", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.TipoDeConstrucaoOutrosImoveis)
                 </div>
 
@@ -527,7 +527,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.PossuiVeiculo)
-                    @Html.DropDownList("PossuiVeiculo", null, new { @class = "form-control" })
+                    @Html.EditorFor(model => model.PossuiVeiculo)
                     @Html.ValidationMessageFor(model => model.PossuiVeiculo)
                 </div>
 
@@ -537,7 +537,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.UtilizacaoDoVeiculo)
-                    @Html.DropDownList("UtilizacaoDoVeiculo", null, new { @class = "form-control" })
+                    @Html.DropDownList("UtilizacaoDoVeiculo", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.UtilizacaoDoVeiculo)
                 </div>
 
@@ -578,7 +578,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.PossuiConvenioMedico)
-                    @Html.DropDownList("PossuiConvenioMedico", null, new { @class = "form-control" })
+                    @Html.EditorFor(model => model.PossuiConvenioMedico)
                     @Html.ValidationMessageFor(model => model.PossuiConvenioMedico)
                 </div>
 
@@ -636,7 +636,7 @@
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.ComoAdquireMedicamentos)
-                    @Html.DropDownList("ComoAdquireMedicamentos", null, new { @class = "form-control" })
+                    @Html.DropDownList("ComoAdquireMedicamentos", null, "Selecione", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.ComoAdquireMedicamentos)
                 </div>
 

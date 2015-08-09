@@ -3,12 +3,12 @@
   //////////////////////////////////////////////////////////////////////////////////////////////
   // Mascaras de netrada
   
-  //$('.date').mask('11/11/1111');
+  $('.date').mask('00/00/0000');
   $('.horaMinuto').mask('00:00');
   //$('.date_time').mask('00/00/0000 00:00:00');
   //$('.cep').mask('00000-000');
   //$('.phone').mask('0000-0000');
-  //$('.phone_with_ddd').mask('(00) 0000-0000');
+  $('.phone_with_ddd').mask('(00) 0000-0000');
   //$('.phone_us').mask('(000) 000-0000');
   //$('.mixed').mask('AAA 000-S0S');
 	$('.cpf').mask('000.000.000-00');
@@ -19,14 +19,3 @@
   //$('.ip_address').mask('099.099.099.099');
 
 });
-
-// Classe de "usuário" correspondente ao UsuarioDataContract
-function Usuario(data){
-  this.Id = data.Id
-  this.Login = data.Login;
-  this.Email = data.Email;
-  this.Status = data.Status;
-  this.DescricaoDoStatus = data.DescricaoDoStatus;
-}
-
-// Classe de "tarefa de usuário" correspondente ao TarefaDataContract

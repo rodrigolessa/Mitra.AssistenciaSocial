@@ -14,9 +14,11 @@ namespace Mitra.AssistenciaSocial.UI.Web.Models
         }
 
         public int Id { get; set; }
+        [DisplayName("Beneficiário")]
         public string Nome { get; set; }
         public string CPF { get; set; }
         public string RG { get; set; }
+        [DisplayName("Data de Nascimento")]
         public Nullable<System.DateTime> DataDeNascimento { get; set; }
         [DisplayName("Gênero")]
         public string Sexo { get; set; }
@@ -40,11 +42,11 @@ namespace Mitra.AssistenciaSocial.UI.Web.Models
         public string TelefoneDoResponsavel { get; set; }
         [DisplayName("Renda Familiar")]
         public string RendaFamiliar { get; set; }
-        [DisplayName("Benefício da Entidade")]
+        [DisplayName("A família recebe benefício de alguma Entidade?")]
         public Nullable<bool> BeneficioDeEntidade { get; set; }
-        [DisplayName("Tipo de Benefício")]
+        [DisplayName("Que Tipo de Benefício")]
         public string TipoDeBeneficioDaEntidade { get; set; }
-        [DisplayName("Nome da Entidade")]
+        [DisplayName("Citar Nome da Entidade")]
         public string NomeDaEntidade { get; set; }
         [DisplayName("Tipo de Residência")]
         public string TipoDeResidencia { get; set; }
@@ -72,6 +74,7 @@ namespace Mitra.AssistenciaSocial.UI.Web.Models
         public string LixoDaConstrucao { get; set; }
         [DisplayName("Possui Outros Imóveis")]
         public Nullable<bool> PossuiOutrosImoveis { get; set; }
+        [DisplayName("Especificar o tipo de construção")]
         public string TipoDeConstrucaoOutrosImoveis { get; set; }
         [DisplayName("Possui Veículo")]
         public Nullable<bool> PossuiVeiculo { get; set; }
